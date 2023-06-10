@@ -14,16 +14,14 @@ int main (){
 while (opcion > 1 || opcion < 3){
     switch (opcion){
         case 1:
-            system ("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex");
-            system("pause");
+            system ("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1" );
             system ("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
-            break;
+            return 0;
         
         case 2:
             system("spicetify upgrade");
-            system("pause");
             system ("spicetify restore backup apply");
-            break;
+            return 0;
         
         case 3:
             exit(0);
